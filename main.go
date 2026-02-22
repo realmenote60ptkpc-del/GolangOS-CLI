@@ -7,12 +7,13 @@ import (
 	"fmt"
 	"os"
 	"strings"
+	"time"
 )
 
 func main() {
 	scanner := bufio.NewScanner(os.Stdin)
 
-	fmt.Println("--- GolangOS CLI v0.1 was booted --- ")
+	fmt.Println("--- GolangOS CLI v0.2 was booted --- ")
 
 	// Scan
 	for {
@@ -22,20 +23,28 @@ func main() {
 
 		// Commands
 
-		if command == "help" {
-			fmt.Println("Список команд: help, exit, about, golangos --version.")
-		} else if command == "golangos --version" {
-			fmt.Println("##-- GolangOS Alpha 0.1 --##")
-		} else if command == "about" {
+		switch command {
+		case "help":
+			fmt.Println("Command list: help, exit, about.")
+
+		case "about":
 			fmt.Println("################")
 			fmt.Println("# GolangOS CLI #")
-			fmt.Println("# Version: 0.1 #")
+			fmt.Println("# Version: 0.2 #")
 			fmt.Println("# Stage: Alpha #")
 			fmt.Println("################")
-		} else if command == "exit" {
-			fmt.Println("Выход из GolangOS CLI 0.1")
-			break
-		} else {
+
+		case "exit":
+			fmt.Println("logout")
+			time.Sleep(5 * time.Millisecond)
+			fmt.Println("logout.")
+			time.Sleep(5 * time.Millisecond)
+			fmt.Println("logout..")
+			time.Sleep(5 * time.Millisecond)
+			fmt.Println("logout....")
+			return
+
+		default:
 			fmt.Println("Command not found!")
 		}
 	}
