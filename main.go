@@ -36,7 +36,7 @@ func main() {
 
 		case "licence", "license":
 			fmt.Println("# Licensed under the Fhund Free License")
-            fmt.Println("Do whatever you want, just credit the author.")
+            fmt.Println("-Do whatever you want, just credit the author-.")
 
 		case "exit":
 			fmt.Println("logout")
