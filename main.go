@@ -33,6 +33,9 @@ func main() {
 			fmt.Println("# Version: 0.2 #")
 			fmt.Println("# Stage: Alpha #")
 			fmt.Println("################")
+			
+        case "licence":
+			fmt.Println("# Licensed under the Fhund Free License")
 
 		case "exit":
 			fmt.Println("logout")
